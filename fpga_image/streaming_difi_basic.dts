@@ -1,0 +1,304 @@
+# 1 "dts/usrp_x410_fpga_X4.dts"
+# 1 "<built-in>"
+# 1 "<command-line>"
+# 1 "dts/usrp_x410_fpga_X4.dts"
+/*
+ * Copyright 2021 Ettus Research, a National Instruments Brand
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ */
+
+/dts-v1/;
+/plugin/;
+
+# 1 "dts/x410-version-info.dtsi" 1
+// mpm_version fpga_current_version 7.9.0
+// mpm_version fpga_oldest_compatible_version 7.9.0
+// mpm_version fpga_version_last_modified_time 0x22062212
+// mpm_version cpld_ifc_current_version 2.0.0
+// mpm_version cpld_ifc_oldest_compatible_version 2.0.0
+// mpm_version cpld_ifc_version_last_modified_time 0x21011809
+// mpm_version db_gpio_ifc_current_version 1.0.0
+// mpm_version db_gpio_ifc_oldest_compatible_version 1.0.0
+// mpm_version db_gpio_ifc_version_last_modified_time 0x20110616
+// mpm_version rf_core_100m_current_version 1.0.0
+// mpm_version rf_core_100m_oldest_compatible_version 1.0.0
+// mpm_version rf_core_100m_version_last_modified_time 0x20102617
+// mpm_version rf_core_400m_current_version 1.0.0
+// mpm_version rf_core_400m_oldest_compatible_version 1.0.0
+// mpm_version rf_core_400m_version_last_modified_time 0x20102617
+# 11 "dts/usrp_x410_fpga_X4.dts" 2
+
+# 1 "dts/x410-fpga.dtsi" 1
+/*
+ * Copyright 2021 Ettus Research, a National Instruments Brand
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ */
+
+&fpga_full {
+ firmware-name = "x410.bin";
+};
+# 13 "dts/usrp_x410_fpga_X4.dts" 2
+
+# 1 "dts/x410-common.dtsi" 1
+/*
+ * Copyright 2021 Ettus Research, a National Instruments Brand
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ */
+
+&fpga_full {
+ #address-cells = <2>;
+ #size-cells = <2>;
+ uio@1000000000 {
+  compatible = "usrp-uio";
+  reg = <0x10 0x00000000 0x0 0x1000>;
+  reg-names = "jtag-0";
+  status = "okay";
+ };
+ uio@1000080000 {
+  compatible = "usrp-uio";
+  reg = <0x10 0x00080000 0x0 0x20000>;
+  reg-names = "ctrlport-mboard-regs";
+  status = "okay";
+ };
+ uio@10000A0000 {
+  compatible = "usrp-uio";
+  reg = <0x10 0x000A0000 0x0 0x4000>;
+  reg-names = "mboard-regs";
+  status = "okay";
+ };
+};
+# 15 "dts/usrp_x410_fpga_X4.dts" 2
+
+# 1 "dts/x410-rfdc.dtsi" 1
+/*
+ * Copyright 2021 Ettus Research, a National Instruments Brand
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ */
+
+&fpga_full {
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ misc_clk_1: misc_clk_1 {
+  #clock-cells = <0>;
+  clock-frequency = <40000000>;
+  compatible = "fixed-clock";
+ };
+
+ misc_clk_2: misc_clk_2 {
+  #clock-cells = <0>;
+  clock-frequency = <184320000>;
+  compatible = "fixed-clock";
+ };
+
+ rf_data_converter: usp_rf_data_converter@1000100000 {
+  clock-names = "s_axi_aclk", "m0_axis_aclk", "m2_axis_aclk", "s0_axis_aclk", "s1_axis_aclk";
+  clocks = <&misc_clk_1>, <&misc_clk_2>, <&misc_clk_2>, <&misc_clk_2>, <&misc_clk_2>;
+  compatible = "xlnx,usp-rf-data-converter-2.1";
+  num-insts = <0x1>;
+  param-list = [ 00 00 00 00 00 10 00 10 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 0f d6 ff 39 cc 97 07 40 0a d7 a3 70 3d 0a a7 40 0a d7 a3 70 3d 0a 67 40 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 9e ef a7 c6 4b 37 1a 40 04 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 10 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 01 00 00 00 00 00 00 00 0f d6 ff 39 cc 97 07 40 0a d7 a3 70 3d 0a a7 40 0a d7 a3 70 3d 0a 67 40 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 9e ef a7 c6 4b 37 1a 40 04 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 10 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 9a 99 99 99 99 99 19 40 00 00 00 00 00 00 b9 40 00 00 00 00 00 00 00 00 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 9e ef a7 c6 4b 37 1a 40 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 00 00 00 00 9a 99 99 99 99 99 19 40 00 00 00 00 00 00 b9 40 00 00 00 00 00 00 00 00 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 9e ef a7 c6 4b 37 1a 40 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 10 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 01 00 00 00 00 00 00 00 0f d6 ff 39 cc 97 07 40 0a d7 a3 70 3d 0a a7 40 0a d7 a3 70 3d 0a 67 40 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 fc a9 f1 d2 4d 62 10 40 02 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 40 9f 40 00 00 00 00 00 00 00 00 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 fc a9 f1 d2 4d 62 10 40 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 01 00 00 00 00 00 00 00 0f d6 ff 39 cc 97 07 40 0a d7 a3 70 3d 0a a7 40 0a d7 a3 70 3d 0a 67 40 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 fc a9 f1 d2 4d 62 10 40 02 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 00 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 01 00 00 00 08 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 00 40 00 00 00 00 00 40 9f 40 00 00 00 00 00 00 00 00 0a 00 00 00 02 00 00 00 01 00 00 00 00 00 00 00 fc a9 f1 d2 4d 62 10 40 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 02 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00 00 00 00 00 08 00 00 00 00 00 00 00 00 00 00 00 03 00 00 00];
+  reg = <0x00000010 0x00100000 0x0 0x40000>;
+ };
+
+ rfdc_regs: uio@1000140000 {
+  status = "okay";
+  compatible = "usrp-uio";
+  reg = <0x10 0x00140000 0x0 0x20000>;
+  reg-names = "rfdc-regs";
+ };
+};
+# 17 "dts/usrp_x410_fpga_X4.dts" 2
+
+# 1 "dts/x410-dma.dtsi" 1
+/*
+ * Copyright 2021 Ettus Research, a National Instruments Brand
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ */
+
+&fpga_full {
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ misc_clk_3: misc_clk_3 {
+  #clock-cells = <0>;
+  clock-frequency = <200000000>;
+  compatible = "fixed-clock";
+ };
+
+ // AXI DMA engine + control
+ nixge_internal: ethernet@10000A4000 {
+  compatible = "ni,xge-enet-3.00";
+  reg = <0x10 0x000A4000 0x0 0x4000
+         0x10 0x000A8000 0x0 0x2000>;
+  reg-names = "dma", "ctrl";
+
+  clocks = <&misc_clk_3>;
+  clock-names = "bus_clk";
+
+  interrupts = <0 104 4 0 105 4>;
+  interrupt-names = "tx", "rx";
+  interrupt-parent = <&gic>;
+
+  status = "okay";
+
+  phy-mode = "internal";
+  local-mac-address = <0x00 0x01 0x02 0x03 0x04 0x05>;
+
+  fixed-link {
+   speed = <1000>;
+   full-duplex;
+  };
+ };
+
+ // Misc internal Ethernet registers
+ uio@10000AA000 {
+  compatible = "usrp-uio";
+  reg = <0x10 0x000AA000 0x0 0x2000>;
+  reg-names = "misc-enet-int-regs";
+  status = "okay";
+ };
+
+};
+# 19 "dts/usrp_x410_fpga_X4.dts" 2
+
+# 1 "dts/x410-10gbe-port0-x4.dtsi" 1
+/*
+ * Copyright 2021 Ettus Research, a National Instruments Brand
+ *
+ * SPDX-License-Identifier: LGPL-3.0-or-later
+ */
+
+&fpga_full {
+ #address-cells = <2>;
+ #size-cells = <2>;
+
+ nixge0: ethernet@1200000000 {
+  compatible = "ni,xge-enet-3.00";
+  reg = <0x12 0x00000000 0x0 0x4000
+     0x12 0x00008000 0x0 0x2000>;
+  reg-names = "dma", "ctrl";
+
+  interrupts = <0 108 4 0 109 4>;
+  interrupt-names = "rx", "tx";
+  interrupt-parent = <&gic>;
+
+  nvmem-cells = <&eth1_addr>;
+  nvmem-cell-names = "address";
+
+  status = "okay";
+
+  phy-mode = "xgmii";
+
+  fixed-link {
+   speed = <10000>;
+   full-duplex;
+   link-gpios = <&gpio 94 0>;
+  };
+ };
+
+ nixge0_1: ethernet@1200010000 {
+  compatible = "ni,xge-enet-3.00";
+  reg = <0x12 0x00010000 0x0 0x4000
+     0x12 0x00018000 0x0 0x2000>;
+  reg-names = "dma", "ctrl";
+
+  interrupts = <0 108 4 0 109 4>;
+  interrupt-names = "rx", "tx";
+  interrupt-parent = <&gic>;
+
+  nvmem-cells = <&eth2_addr>;
+  nvmem-cell-names = "address";
+
+  status = "okay";
+
+  phy-mode = "xgmii";
+
+  fixed-link {
+   speed = <10000>;
+   full-duplex;
+   link-gpios = <&gpio 95 0>;
+  };
+ };
+
+ nixge0_2: ethernet@1200020000 {
+  compatible = "ni,xge-enet-3.00";
+  reg = <0x12 0x00020000 0x0 0x4000
+     0x12 0x00028000 0x0 0x2000>;
+  reg-names = "dma", "ctrl";
+
+  interrupts = <0 108 4 0 109 4>;
+  interrupt-names = "rx", "tx";
+  interrupt-parent = <&gic>;
+
+  nvmem-cells = <&eth3_addr>;
+  nvmem-cell-names = "address";
+
+  status = "okay";
+
+  phy-mode = "xgmii";
+
+  fixed-link {
+   speed = <10000>;
+   full-duplex;
+   link-gpios = <&gpio 96 0>;
+  };
+ };
+
+ nixge0_3: ethernet@1200030000 {
+  compatible = "ni,xge-enet-3.00";
+  reg = <0x12 0x00030000 0x0 0x4000
+     0x12 0x00038000 0x0 0x2000>;
+  reg-names = "dma", "ctrl";
+
+  interrupts = <0 108 4 0 109 4>;
+  interrupt-names = "rx", "tx";
+  interrupt-parent = <&gic>;
+
+  nvmem-cells = <&eth4_addr>;
+  nvmem-cell-names = "address";
+
+  status = "okay";
+
+  phy-mode = "xgmii";
+
+  fixed-link {
+   speed = <10000>;
+   full-duplex;
+   link-gpios = <&gpio 97 0>;
+  };
+ };
+
+ misc_enet_regs_0: uio@120000A000 {
+  status = "okay";
+  compatible = "usrp-uio";
+  reg = <0x12 0x0000A000 0x0 0x2000>;
+  reg-names = "misc-enet-regs0";
+ };
+
+ misc_enet_regs_0_1: uio@120001A000 {
+  status = "okay";
+  compatible = "usrp-uio";
+  reg = <0x12 0x0001A000 0x0 0x2000>;
+  reg-names = "misc-enet-regs0-1";
+ };
+
+ misc_enet_regs_0_2: uio@120002A000 {
+  status = "okay";
+  compatible = "usrp-uio";
+  reg = <0x12 0x0002A000 0x0 0x2000>;
+  reg-names = "misc-enet-regs0-2";
+ };
+
+ misc_enet_regs_0_3: uio@120003A000 {
+  status = "okay";
+  compatible = "usrp-uio";
+  reg = <0x12 0x0003A000 0x0 0x2000>;
+  reg-names = "misc-enet-regs0-3";
+ };
+};
+# 20 "dts/usrp_x410_fpga_X4.dts" 2

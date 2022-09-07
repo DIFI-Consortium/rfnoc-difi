@@ -1,0 +1,134 @@
+Vivado Simulator 2019.1
+Copyright 1986-1999, 2001-2019 Xilinx, Inc. All Rights Reserved.
+Running: /tools/Xilinx/Vivado/2019.1/bin/unwrapped/lnx64.o/xelab -wto 5d0508c4f05d4dd7b17af2651b87dade --incr --debug all --relax --mt 8 -d UHD_FPGA_DIR=/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/top/../.. -d WORKING_DIR=/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi -L xbip_utils_v3_0_10 -L xbip_pipe_v3_0_6 -L xbip_bram18k_v3_0_6 -L mult_gen_v12_0_15 -L xil_defaultlib -L unisims_ver -L unimacro_ver -L secureip -L xpm --snapshot rfnoc_block_difi_tb_behav xil_defaultlib.rfnoc_block_difi_tb xil_defaultlib.glbl -log elaborate.log -timescale 1ns/1ns 
+Using 8 slave threads.
+Starting static elaboration
+Completed static elaboration
+Starting simulation data flow analysis
+WARNING: [XSIM 43-4328] File: /home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv Line: 183 : Sensitivity on input argument "port_num" of task "connect_master_data_port" may never get triggered.
+WARNING: [XSIM 43-3980] File "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv" Line 183 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+WARNING: [XSIM 43-4328] File: /home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv Line: 199 : Sensitivity on input argument "port_num" of task "connect_slave_data_port" may never get triggered.
+WARNING: [XSIM 43-3980] File "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv" Line 199 : The SystemVerilog feature ": Sensitivity on input argument of Class Member Task" is not supported yet for simulation.
+Completed simulation data flow analysis
+Time Resolution for simulation is 1ps
+Compiling package std.standard
+Compiling package std.textio
+Compiling package ieee.std_logic_1164
+Compiling package ieee.numeric_std
+Compiling package mult_gen_v12_0_15.mult_gen_v12_0_15_viv_comp
+Compiling package xbip_utils_v3_0_10.xbip_utils_v3_0_10_pkg
+Compiling package mult_gen_v12_0_15.mult_gen_v12_0_15_pkg
+Compiling package ieee.std_logic_arith
+Compiling package ieee.std_logic_signed
+Compiling package unisim.vcomponents
+Compiling package ieee.std_logic_unsigned
+Compiling package ieee.vital_timing
+Compiling package ieee.vital_primitives
+Compiling package unisim.vpkg
+Compiling package xil_defaultlib.PkgRfnocBlockCtrlBfm
+Compiling package xil_defaultlib.PkgChdrUtils
+Compiling package xil_defaultlib.PkgChdrData
+Compiling package xil_defaultlib.PkgChdrBfm
+Compiling package xil_defaultlib.PkgAxiStreamBfm
+Compiling package std.std
+Compiling package xil_defaultlib.PkgCtrlIfaceBfm
+Compiling package xil_defaultlib.PkgAxisCtrlBfm
+Compiling package xil_defaultlib.PkgChdrIfaceBfm
+Compiling package xil_defaultlib.PkgTestExec
+Compiling package xil_defaultlib.PkgRfnocItemUtils
+Compiling package xil_defaultlib.$unit_AxiStreamIf_sv
+Compiling module xil_defaultlib.RfnocBackendIf
+Compiling module xil_defaultlib.AxiStreamIf(DATA_WIDTH=32)
+Compiling module xil_defaultlib.AxiStreamIf_default
+Compiling module xil_defaultlib.sim_clock_gen(PERIOD=5.0)
+Compiling module xil_defaultlib.sim_clock_gen(PERIOD=8.0)
+Compiling module xil_defaultlib.synchronizer_impl(WIDTH=33,INITI...
+Compiling module xil_defaultlib.synchronizer(WIDTH=33,INITIAL_VA...
+Compiling module xil_defaultlib.synchronizer_impl_default
+Compiling module xil_defaultlib.synchronizer_default
+Compiling module xil_defaultlib.pulse_synchronizer(MODE="POSEDGE...
+Compiling module xil_defaultlib.pulse_stretch_min(LENGTH=32)
+Compiling module xil_defaultlib.synchronizer_impl(WIDTH=2,INITIA...
+Compiling module xil_defaultlib.synchronizer(WIDTH=2,INITIAL_VAL...
+Compiling module xil_defaultlib.backend_iface(NOC_ID=32'b0110100...
+Compiling module xil_defaultlib.synchronizer_impl(INITIAL_VAL=1'...
+Compiling module xil_defaultlib.synchronizer(INITIAL_VAL=1'b1)
+Compiling module xil_defaultlib.synchronizer_impl(WIDTH=5)
+Compiling module xil_defaultlib.synchronizer(WIDTH=5)
+Compiling module xil_defaultlib.bin2gray(WIDTH=5)
+Compiling module xil_defaultlib.gray2bin(WIDTH=5)
+Compiling module xil_defaultlib.axi_fifo_2clk(SIZE=1,WIDTH=33,PI...
+Compiling module xil_defaultlib.axi_fifo_2clk(SIZE=1,WIDTH=33,PI...
+Compiling module unisims_ver.SRLC32E_default
+Compiling module xil_defaultlib.axi_fifo_short(WIDTH=33)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=33)
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=67)
+Compiling module xil_defaultlib.axis_upsizer(RATIO=2)
+Compiling module xil_defaultlib.axis_downsizer(OUT_DATA_W=64,OUT...
+Compiling module xil_defaultlib.axis_width_conv(WORD_W=32,IN_WOR...
+Compiling module xil_defaultlib.ram_2port_impl_lutram(DWIDTH=67,...
+Compiling module xil_defaultlib.ram_2port(DWIDTH=67,AWIDTH=4,RW_...
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=4)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=4,SIZE=1)
+Compiling module xil_defaultlib.axi_packet_gate(WIDTH=66,SIZE=4)
+Compiling module xil_defaultlib.axis_upsizer(IN_DATA_W=64,IN_USE...
+Compiling module xil_defaultlib.axis_downsizer(RATIO=2)
+Compiling module xil_defaultlib.axis_width_conv(WORD_W=32,IN_WOR...
+Compiling module xil_defaultlib.axis_ctrl_slave
+Compiling module xil_defaultlib.ctrlport_endpoint(THIS_PORTID=10...
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=65)
+Compiling module xil_defaultlib.chdr_compute_tkeep(CHDR_W=64)
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=69)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=69,SIZE=1)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=67,SIZE=1)
+Compiling module xil_defaultlib.axis_width_conv(WORD_W=32,IN_WOR...
+Compiling module xil_defaultlib.synchronizer_impl(WIDTH=4,INITIA...
+Compiling module xil_defaultlib.synchronizer(WIDTH=4,INITIAL_VAL...
+Compiling module xil_defaultlib.axi_fifo_2clk(SIZE=1,WIDTH=33)
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=34)
+Compiling module xil_defaultlib.axis_packet_flush(WIDTH=33,PIPEL...
+Compiling module xil_defaultlib.axis_packet_flush(WIDTH=68,PIPEL...
+Compiling module xil_defaultlib.chdr_to_axis_pyld_ctxt(CHDR_W=64...
+Compiling module xil_defaultlib.axis_width_conv(WORD_W=32,IN_WOR...
+Compiling module xil_defaultlib.axi_fifo(WIDTH=65,SIZE=1)
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=66)
+Compiling module xil_defaultlib.axis_packet_flush(WIDTH=65,PIPEL...
+Compiling module xil_defaultlib.ram_2port_impl_auto(DWIDTH=65,AW...
+Compiling module xil_defaultlib.ram_2port(DWIDTH=65,AWIDTH=6'b01...
+Compiling module xil_defaultlib.axi_fifo_flop2(WIDTH=6'b01010)
+Compiling module xil_defaultlib.axi_fifo(WIDTH=6'b01010,SIZE=32'...
+Compiling module xil_defaultlib.axi_fifo(WIDTH=6'b01010,SIZE=1)
+Compiling module xil_defaultlib.axi_packet_gate(SIZE=6'b01010)
+Compiling module xil_defaultlib.axis_pyld_ctxt_to_chdr(CHDR_W=64...
+Compiling module xil_defaultlib.noc_shell_difi(THIS_PORTID=10'b0...
+Compiling architecture lut2_v of entity unisim.LUT2 [\LUT2(init="1000")(0,3)\]
+Compiling architecture mult_and_v of entity unisim.MULT_AND [mult_and_default]
+Compiling architecture muxcy_v of entity unisim.MUXCY [muxcy_default]
+Compiling architecture xorcy_v of entity unisim.XORCY [xorcy_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.op_resize [\op_resize(ai_width=64,bi_width=...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.luts [\luts(c_xdevicefamily="zynquplus...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.mult_gen_v12_0_15_viv [\mult_gen_v12_0_15_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.mult_gen_v12_0_15 [\mult_gen_v12_0_15(c_xdevicefami...]
+Compiling architecture mult_64_64_6p_ce_arch of entity xil_defaultlib.mult_64_64_6p_ce [mult_64_64_6p_ce_default]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_dist_mem [\ccm_dist_mem(c_addr_width=6,c_d...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_syncmem [\ccm_syncmem(c_xdevicefamily="zy...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_scaled_adder [\ccm_scaled_adder(a_width=34,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_scaled_adder [\ccm_scaled_adder(a_width=41,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_scaled_adder [\ccm_scaled_adder(a_width=54,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_dist_mem [\ccm_dist_mem(c_addr_width=6,c_d...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_syncmem [\ccm_syncmem(c_xdevicefamily="zy...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_scaled_adder [\ccm_scaled_adder(a_width=41,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_scaled_adder [\ccm_scaled_adder(a_width=79,b_w...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.delay_line [\delay_line(c_xdevicefamily="zyn...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm_operation [\ccm_operation(c_xdevicefamily="...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.ccm [\ccm(c_xdevicefamily="zynquplus"...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.mult_gen_v12_0_15_viv [\mult_gen_v12_0_15_viv(c_verbosi...]
+Compiling architecture xilinx of entity mult_gen_v12_0_15.mult_gen_v12_0_15 [\mult_gen_v12_0_15(c_xdevicefami...]
+Compiling architecture mult_64_1e12_5p_ce_arch of entity xil_defaultlib.mult_64_1e12_5p_ce [mult_64_1e12_5p_ce_default]
+Compiling module xil_defaultlib.chdr_difi_timestamp_converter
+Compiling module xil_defaultlib.rfnoc_block_difi(THIS_PORTID=10'...
+Compiling module xil_defaultlib.rfnoc_block_difi_tb
+Compiling module xil_defaultlib.glbl
+Built simulation snapshot rfnoc_block_difi_tb_behav

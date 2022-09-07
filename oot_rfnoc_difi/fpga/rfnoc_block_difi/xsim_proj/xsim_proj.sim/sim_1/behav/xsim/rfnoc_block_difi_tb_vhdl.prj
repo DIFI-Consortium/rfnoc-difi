@@ -1,0 +1,7 @@
+# compile vhdl design source files
+vhdl xil_defaultlib  \
+"../../../../../build-ip/xczu28drffvg1517-1e/mult_64_1e12_5p_ce/sim/mult_64_1e12_5p_ce.vhd" \
+"../../../../../build-ip/xczu28drffvg1517-1e/mult_64_64_6p_ce/sim/mult_64_64_6p_ce.vhd" \
+
+# Do not sort compile order
+nosort

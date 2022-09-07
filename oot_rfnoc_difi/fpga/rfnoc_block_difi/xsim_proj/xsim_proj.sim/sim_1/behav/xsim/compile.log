@@ -1,0 +1,90 @@
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_demux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_demux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_fifo.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/sim/fifo/axi_fifo_2clk_sim.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_2clk
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_fifo_bram.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_bram
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_fifo_flop.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_flop
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_fifo_flop2.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_flop2
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_fifo_short.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_fifo_short
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_mux.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_mux
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/fifo/axi_packet_gate.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axi_packet_gate
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/axis_ctrl_master.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_ctrl_master
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/axis_ctrl_slave.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_ctrl_slave
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/axi/axis_downsizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_downsizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/axi/axis_packet_flush.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_packet_flush
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/axis_pyld_ctxt_to_chdr.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_pyld_ctxt_to_chdr
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/axi/axis_upsizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_upsizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/axi/axis_width_conv.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module axis_width_conv
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/backend_iface.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module backend_iface
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/bin2gray.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module bin2gray
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/chdr_compute_tkeep.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chdr_compute_tkeep
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/chdr_to_axis_pyld_ctxt.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chdr_to_axis_pyld_ctxt
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/rfnoc/core/ctrlport_endpoint.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ctrlport_endpoint
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/gray2bin.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module gray2bin
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/noc_shell_difi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module noc_shell_difi
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/pulse_stretch_min.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_stretch_min
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/pulse_synchronizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module pulse_synchronizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/ram_2port.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_auto
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_reg
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_lutram
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_bram
+INFO: [VRFC 10-311] analyzing module ram_2port_impl_uram
+INFO: [VRFC 10-311] analyzing module ram_2port
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/rfnoc_block_difi.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rfnoc_block_difi
+WARNING: [VRFC 10-3380] identifier 'chdr_seqnum' is used before its declaration [/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/rfnoc_block_difi.v:315]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/synchronizer.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synchronizer
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/control/synchronizer_impl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module synchronizer_impl
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/lib/axi4s_sv/AxiStreamIf.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgAxiStreamBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgChdrData.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgChdrUtils.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgAxisCtrlBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv" into library xil_defaultlib
+WARNING: [VRFC 10-674] expression with variable or undeterminable width as argument to $bits [/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv:342]
+WARNING: [VRFC 10-674] expression with variable or undeterminable width as argument to $bits [/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgChdrBfm.sv:379]
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgChdrIfaceBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgCtrlIfaceBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgRfnocBlockCtrlBfm.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgRfnocItemUtils.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" into library xil_defaultlib
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/chdr_difi_timestamp_converter.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module chdr_difi_timestamp_converter
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/sim_clock_gen.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module sim_clock_gen
+INFO: [VRFC 10-2263] Analyzing SystemVerilog file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/rfnoc_block_difi_tb.sv" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module rfnoc_block_difi_tb
+WARNING: [VRFC 10-3824] variable 'NUM_PACKETS' must explicitly be declared as automatic or static [/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/rfnoc_block_difi_tb.sv:426]
+INFO: [VRFC 10-2263] Analyzing Verilog file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/xsim_proj/xsim_proj.sim/sim_1/behav/xsim/glbl.v" into library xil_defaultlib
+INFO: [VRFC 10-311] analyzing module glbl
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/build-ip/xczu28drffvg1517-1e/mult_64_1e12_5p_ce/sim/mult_64_1e12_5p_ce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_64_1e12_5p_ce'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/build-ip/xczu28drffvg1517-1e/mult_64_64_6p_ce/sim/mult_64_64_6p_ce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_64_64_6p_ce'

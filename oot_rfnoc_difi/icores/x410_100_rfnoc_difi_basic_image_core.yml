@@ -1,0 +1,73 @@
+# General parameters
+# -----------------------------------------
+schema: rfnoc_imagebuilder_args         # Identifier for the schema used to validate this file
+copyright: >-                           # Copyright information used in file headers
+  Ettus Research, A National Instruments Brand
+license: >-                             # License information used in file headers
+  SPDX-License-Identifier: LGPL-3.0-or-later
+version: '1.0'                          # File version
+chdr_width: 64                          # Bit width of the CHDR bus for this image
+device: 'x410'                          # USRP type
+image_core_name: 'x410_100_BDIFI'        # Name to use for the RFNoC Image Core files
+default_target: 'X410_X4_100'           # Default make target
+
+# A list of all stream endpoints in design
+# ----------------------------------------
+stream_endpoints:
+  ep0:                                  # Stream endpoint name
+    ctrl: True                          # Endpoint passes control traffic
+    data: True                          # Endpoint passes data traffic
+    buff_size_bytes: 262144             # Ingress buffer size for data
+
+# A list of all NoC blocks in design
+# ----------------------------------
+noc_blocks:
+  radio0:
+    block_desc: 'radio.yml'
+    parameters:
+      NUM_PORTS: 1
+      NIPC: RADIO_NIPC
+  ddc0:
+    block_desc: 'ddc.yml'
+    parameters:
+      NUM_PORTS: 1
+  difi0:
+    block_desc: 'difi_basic.yml'
+
+# A list of all static connections in design
+# ------------------------------------------
+# Format: A list of connection maps (list of key-value pairs) with the following keys
+#   - srcblk  = Source block to connect
+#   - srcport = Port on the source block to connect
+#   - dstblk  = Destination block to connect
+#   - dstport = Port on the destination block to connect
+connections:
+  # RF A:0 TX
+  - { srcblk: ep0,    srcport: out0,  dstblk: radio0, dstport: in_0 }
+  # RF A:0 RX
+  - { srcblk: radio0, srcport: out_0, dstblk: ddc0,   dstport: in_0 }
+  - { srcblk: ddc0,   srcport: out_0, dstblk: difi0,    dstport: in  }
+  - { srcblk: difi0,   srcport: out,   dstblk: ep0,    dstport: in0  }
+  # RF A:1 TX
+  # RF A:1 RX
+  #
+  # RF B:0 TX
+  # RF B:0 RX
+  # RF B:1 TX
+  # RF B:1 RX
+  #
+  # BSP Connections
+  - { srcblk: radio0,   srcport: ctrlport,    dstblk: _device_, dstport: ctrlport_radio0 }
+  - { srcblk: _device_, srcport: radio0,      dstblk: radio0,   dstport: radio           }
+  - { srcblk: _device_, srcport: time,        dstblk: radio0,   dstport: time            }
+
+# A list of all clock domain connections in design
+# ------------------------------------------------
+# Format: A list of connection maps (list of key-value pairs) with the following keys
+#   - srcblk  = Source block to connect (Always "_device"_)
+#   - srcport = Clock domain on the source block to connect
+#   - dstblk  = Destination block to connect
+#   - dstport = Clock domain on the destination block to connect
+clk_domains:
+    - { srcblk: _device_, srcport: radio,    dstblk: radio0,  dstport: radio }
+    - { srcblk: _device_, srcport: radio,    dstblk: ddc0,    dstport: ce    }

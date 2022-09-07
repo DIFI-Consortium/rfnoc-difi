@@ -1,0 +1,27 @@
+localparam REG_DIFI_TSI_ADDR = 0;
+localparam REG_DIFI_TSI_DEFAULT = 0;
+localparam REG_DIFI_TSI_WIDTH = 2;
+
+localparam REG_DIFI_STREAMID_ADDR = 1;
+localparam REG_DIFI_STREAMID_DEFAULT = 0;
+localparam REG_DIFI_STREAMID_WIDTH = 32;
+
+localparam REG_DIFI_OUI_ADDR = 2;
+localparam REG_DIFI_OUI_DEFAULT = 24'h7c386c;
+localparam REG_DIFI_OUI_WIDTH = 24;
+
+localparam REG_DIFI_ICC_ADDR = 3;
+localparam REG_DIFI_ICC_DEFAULT = 0;
+localparam REG_DIFI_ICC_WIDTH = 16;
+
+localparam REG_DIFI_PCC_ADDR = 4;
+localparam REG_DIFI_PCC_DEFAULT = 0;
+localparam REG_DIFI_PCC_WIDTH = 16;
+
+localparam REG_DIFI_TICK_PERIOD_MS_ADDR = 5;
+localparam REG_DIFI_TICK_PERIOD_LS_ADDR = 6;
+localparam REG_DIFI_TICK_PERIOD_DEFAULT = 64'h_000001179ec9cbd8; // Period for 247.56 MHz
+localparam REG_DIFI_TICK_PERIOD_WIDTH = 64;
+
+localparam REG_DIFI_STANDARD_CONTEXT_ADDR = 7;
+localparam REG_DIFI_STANDARD_CONTEXT_DEFAULT_HEADER = 32'h4920001B;

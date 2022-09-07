@@ -1,0 +1,46 @@
+Vivado Simulator 2019.1
+Time resolution is 1 ps
+========================================================
+TESTBENCH STARTED: rfnoc_block_difi_tb
+========================================================
+[TEST CASE   1] (t =         0 ns) BEGIN: Flush block then reset it...
+[TEST CASE   1] (t =      2495 ns) DONE... Passed
+[TEST CASE   2] (t =      2495 ns) BEGIN: Verify Block Info...
+[TEST CASE   2] (t =      2495 ns) DONE... Passed
+[TEST CASE   3] (t =      2495 ns) BEGIN: Verify tsi register...
+[TEST CASE   3] (t =      3072 ns) DONE... Passed
+[TEST CASE   4] (t =      3072 ns) BEGIN: Verify streamid register...
+[TEST CASE   4] (t =      3632 ns) DONE... Passed
+[TEST CASE   5] (t =      3632 ns) BEGIN: Verify oui register...
+[TEST CASE   5] (t =      4160 ns) DONE... Passed
+[TEST CASE   6] (t =      4160 ns) BEGIN: Verify icc register...
+[TEST CASE   6] (t =      4720 ns) DONE... Passed
+[TEST CASE   7] (t =      4720 ns) BEGIN: Verify pcc register...
+[TEST CASE   7] (t =      5304 ns) DONE... Passed
+[TEST CASE   8] (t =      5304 ns) BEGIN: Verify tick rate registers...
+[TEST CASE   8] (t =      6448 ns) DONE... Passed
+[TEST CASE   9] (t =      6448 ns) BEGIN: Test random packets...
+[TEST CASE   9] (t =     19480 ns) DONE... Passed
+[TEST CASE  10] (t =     19480 ns) BEGIN: Test without back pressure...
+[TEST CASE  10] (t =     31465 ns) DONE... Passed
+[TEST CASE  11] (t =     31465 ns) BEGIN: Test back pressure...
+[TEST CASE  11] (t =     46580 ns) DONE... Passed
+[TEST CASE  12] (t =     46580 ns) BEGIN: Test underflow...
+[TEST CASE  12] (t =     59680 ns) DONE... Passed
+[TEST CASE  13] (t =     59680 ns) BEGIN: Test min packet size...
+[TEST CASE  13] (t =     60700 ns) DONE... Passed
+========================================================
+TESTBENCH FINISHED: rfnoc_block_difi_tb
+ - Time elapsed:  60700 ns
+ - Tests Run:     13
+ - Tests Passed:  13
+ - Tests Failed:  0
+Result: PASSED   
+========================================================
+$finish called at time : 60700 ns : File "/home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgTestExec.sv" Line 102
+FATAL_ERROR: Vivado Simulator kernel has discovered an exceptional condition from which it cannot recover. Process will terminate. For technical support on this issue, please open a WebCase with this project attached at http://www.xilinx.com/support.
+Time: 60700 ns  Iteration: 0  Process: /rfnoc_block_difi_tb/Initial368_317
+  File: /home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/rfnoc_block_difi_tb.sv
+
+HDL Line: /home/spectrum/chdr_difi/rfnoc-difi/uhddev/fpga/usrp3/sim/rfnoc/PkgTestExec.sv:102
+The simulator has terminated in an unexpected manner with exit code 1.  Please review the simulation log (xsim.log) for details.

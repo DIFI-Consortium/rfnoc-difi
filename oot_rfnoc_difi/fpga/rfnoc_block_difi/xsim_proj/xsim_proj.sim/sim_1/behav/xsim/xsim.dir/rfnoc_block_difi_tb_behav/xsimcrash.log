@@ -1,0 +1,15 @@
+Printing stacktrace...
+
+[0] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::populateDynamicType(std::vector<int, std::allocator<int> >*, int, ISIM::SVType*, std::vector<int, std::allocator<int> >*, char*, bool, bool)+0x65f) [0x7f5cb707218f]
+[1] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::populateDynamicType(std::vector<int, std::allocator<int> >*, int, ISIM::SVType*, std::vector<int, std::allocator<int> >*, char*, bool, bool)+0xd11) [0x7f5cb7072841]
+[2] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::populateDynamicType(std::vector<int, std::allocator<int> >*, int, ISIM::SVType*, std::vector<int, std::allocator<int> >*, char*, bool, bool)+0xd11) [0x7f5cb7072841]
+[3] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::UserAccessService::getDynamicType(ISIM::HdlValueObject const&, unsigned int, unsigned int, std::vector<int, std::allocator<int> >*, std::vector<int, std::allocator<int> >*)+0x4d) [0x7f5cb7072d5d]
+[4] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::GDBMIInputParser::get_dynamic_type(__gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&, __gnu_cxx::__normal_iterator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const*, std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > >&)+0xe6) [0x7f5cb6ed19f6]
+[5] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::GDBMIInputParser::action(std::vector<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, std::allocator<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > > > const&)+0xf2) [0x7f5cb6ecc322]
+[6] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::GDBMIInputParser::processCommandLine(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&)+0xbe) [0x7f5cb6ecdc8e]
+[7] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(ISIMK::GDBMIInputParser::loop()+0x9a) [0x7f5cb6ecddda]
+[8] /tools/Xilinx/Vivado/2019.1/lib/lnx64.o/librdi_simulator_kernel.so(iki_simulate_design+0x5f) [0x7f5cb6f0b47f]
+[9] xsim.dir/rfnoc_block_difi_tb_behav/xsimk(+0x2c2f37) [0x5587305fdf37]
+[10] /lib/x86_64-linux-gnu/libc.so.6(__libc_start_main+0xf3) [0x7f5cb6948083]
+[11] xsim.dir/rfnoc_block_difi_tb_behav/xsimk(+0x20c1e) [0x55873035bc1e]
+Done

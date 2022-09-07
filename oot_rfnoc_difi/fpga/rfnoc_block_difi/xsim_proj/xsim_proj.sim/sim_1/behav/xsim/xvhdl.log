@@ -1,0 +1,4 @@
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/build-ip/xczu28drffvg1517-1e/mult_64_1e12_5p_ce/sim/mult_64_1e12_5p_ce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_64_1e12_5p_ce'
+INFO: [VRFC 10-163] Analyzing VHDL file "/home/spectrum/chdr_difi/rfnoc-difi/oot_rfnoc_difi/fpga/rfnoc_block_difi/build-ip/xczu28drffvg1517-1e/mult_64_64_6p_ce/sim/mult_64_64_6p_ce.vhd" into library xil_defaultlib
+INFO: [VRFC 10-3107] analyzing entity 'mult_64_64_6p_ce'
