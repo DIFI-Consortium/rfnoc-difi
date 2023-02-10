@@ -1,0 +1,5 @@
+find_package(UHD)
+if(UHD_FOUND)
+    add_executable(uhd_to_difi uhd_to_difi.cpp)
+    target_link_libraries(uhd_to_difi uhd boost_program_options difipack)
+endif()
